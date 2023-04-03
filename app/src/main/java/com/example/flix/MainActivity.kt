@@ -3,10 +3,12 @@ package com.example.flix
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.flix.databinding.ActivityMainBinding
@@ -87,6 +89,28 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
             R.id.item_customer -> Toast.makeText(this, "준비 중", Toast.LENGTH_SHORT).show()
         }
         return false
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.navi_menu,menu)
+        val searchMenuItem = menu?.findItem(R.id.search)
+        val searchView = searchMenuItem?.actionView as SearchView
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+
+            // 검색창에 검색글을 입력하고 엔터를 칠 때 콜백함수
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                Toast.makeText(applicationContext,"${query}",Toast.LENGTH_SHORT).show()
+                return true
+            }
+            // 검색창에 검색을 입력할 때마다 콜백발생
+            override fun onQueryTextChange(newText: String?): Boolean {
+
+                return true
+            }
+
+        })
+
+        return super.onCreateOptionsMenu(menu)
     }
 
 }

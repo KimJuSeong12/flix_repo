@@ -18,9 +18,14 @@
         android:title="고객 센터"
         android:icon="@drawable/baseline_question_mark_24"/>
 
-    <item android:id="@+id/search"
+    <item
+        android:id="@+id/search"
         android:title="search"
-        app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="always" />
+        android:enabled="true"
+        android:visible="true"
+        android:icon="@drawable/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+
 
 </menu>

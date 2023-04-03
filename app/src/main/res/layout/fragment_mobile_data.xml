@@ -30,6 +30,7 @@
 
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="0dp"
@@ -40,6 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
 
         <Switch
             android:id="@+id/switch1"

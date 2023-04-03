@@ -20,4 +20,6 @@
     <string name="you">뉴욕의 서점 매니저가 작가 지망생에게 반한다. 집착의 늪에 사로잡힌 남자, 그녀를 얻을 수만 있다면 무슨 짓이든 저지를 수 있다. 그의 위험한 사랑을 다룬 스릴러.</string>
     <string name="drawer_open">Open Drawer</string>
     <string name="drawer_close">Close Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
